@@ -1,0 +1,67 @@
+@import "tailwindcss";
+
+/* Hide scrollbar globally across all browsers while preserving scrolling functionality */
+* {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+*::-webkit-scrollbar {
+  display: none;
+  width: 0px;
+  height: 0px;
+  background: transparent;
+}
+
+@layer base {
+  html, body {
+    overflow-x: hidden;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  html::-webkit-scrollbar, body::-webkit-scrollbar {
+    display: none;
+    width: 0px;
+    height: 0px;
+    background: transparent;
+  }
+  img, svg, video, canvas, iframe {
+    max-width: 100%;
+    display: block;
+  }
+}
+
+/* Utility class for hiding scrollbars on specific containers */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+  width: 0px;
+  height: 0px;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Container isolation & aspect ratio layout reset */
+.overflow-hidden {
+  isolation: isolate;
+}
+
+[class*="aspect-"] {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+[class*="aspect-"] img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+

@@ -1,0 +1,452 @@
+{
+  "version": "1.2.0",
+  "lastUpdated": "2026-09-07T00:00:00.010Z",
+  "profile": {
+    "name": "Noor Alam Khatri",
+    "title": "Advocate High Court & Legal Consultant",
+    "barRegistrationNo": "HC-BAR/2011/9842",
+    "experienceYears": 18,
+    "casesHandled": 1450,
+    "successRatePercentage": 94,
+    "tagline": "Relentless Advocacy. Uncompromising Legal Ethics. Proven Courtroom Results.",
+    "bio": "Advocate Noor Alam Khatri is a distinguished High Court legal practitioner with over 18 years of courtroom experience. Specializing in Constitutional Writs, Complex Civil Litigation, High-Stakes Commercial Disputes, and Criminal Appeals, Advocate Khatri has built a stellar reputation for meticulous legal analysis, persuasive oral advocacy, and landmark precedent victories.",
+    "mainOfficeAddress": "Suit No. 112-113, 1st Floor, Paradise Chambers, Near Passport Office, Saddar, Karachi.",
+    "highCourtChamberAddress": "Suit No. 112-113, 1st Floor, Paradise Chambers, Near Passport Office, Saddar, Karachi.",
+    "phonePrimary": "03001191119",
+    "phoneSecondary": "021-35631199",
+    "emailPrimary": "nooradv55@gmail.com",
+    "workingHours": "Mon-Sat-09:00 AM - 07:00 PM",
+    "googleMapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3620.012581298412!2d67.0099318!3d24.8607343!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33e11f1f1f1f1%3A0x123456789abcdef!2sHigh%20Court%20Building!5e0!3m2!1sen!2s!4v1700000000000!5m2!1sen!2s",
+    "latitude": 24.860734,
+    "longitude": 67.009932,
+    "domainUrl": "https://nakadvocate.com",
+    "portraitUrl": "https://raw.githubusercontent.com/wasebkatha-cpu/NAKAdvocateImages/main/images/profile_portrait.jpg",
+    "bannerUrl": "",
+    "additionalContacts": [
+      {
+        "id": "contact-01",
+        "title": "Office Address",
+        "type": "Office",
+        "value": "Suit No. 112-113, 1st Floor, Paradise Chambers, Near Passport Office, Saddar, Karachi.",
+        "subtitle": "Main Law Chamber"
+      },
+      {
+        "id": "contact-02",
+        "title": "Primary Phone Number",
+        "type": "Phone",
+        "value": "03001191119",
+        "subtitle": "Same for WhatsApp"
+      },
+      {
+        "id": "contact-03",
+        "title": "Landline",
+        "type": "Phone",
+        "value": "021-35631199",
+        "subtitle": "Desk Office Line"
+      },
+      {
+        "id": "contact-04",
+        "title": "Mail Address",
+        "type": "Email",
+        "value": "nooradv55@gmail.com",
+        "subtitle": "Official Correspondence"
+      },
+      {
+        "id": "contact-05",
+        "title": "Working Hours",
+        "type": "Hours",
+        "value": "Mon-Sat-09:00 AM - 07:00 PM",
+        "subtitle": "Chamber Timings"
+      }
+    ]
+  },
+  "gitConfig": {
+    "mainRepoOwner": "wasebkatha-cpu",
+    "mainRepoName": "NAKAdvocate",
+    "mainRepoBranch": "main",
+    "textRepoOwner": "wasebkatha-cpu",
+    "textRepoName": "NAKAdvocateText",
+    "textRepoBranch": "main",
+    "textFilePath": "site_data.json",
+    "imageRepoOwner": "wasebkatha-cpu",
+    "imageRepoName": "NAKAdvocateImages",
+    "imageRepoBranch": "main",
+    "repoOwner": "wasebkatha-cpu",
+    "repoName": "NAKAdvocate",
+    "branch": "main",
+    "filePath": "site_data.json",
+    "gitHubToken": "",
+    "autoSync": true,
+    "lastSyncTime": "2026-09-07T00:00:00.011Z",
+    "lastCommitHash": "Initial"
+  },
+  "cases": [
+    {
+      "id": "case-01",
+      "title": "State vs. Multi-State Financial Corp & Directors",
+      "citation": "2024 CLD 1892 (High Court)",
+      "court": "High Court",
+      "category": "Corporate & Commercial",
+      "year": 2024,
+      "clientType": "Minority Shareholders & Investors",
+      "summary": "Successfully secured a landmark injunction protecting minority shareholder assets against unauthorized corporate asset stripping exceeding $12 Million. Court validated minority audit rights under section 286.",
+      "legalStrategy": "Demonstrated fiduciary duty breach through forensic financial audit trail and secured ex-parte interim relief restraining board decisions.",
+      "precedentSet": "Established precedent empowering minority equity holders to petition for immediate forensic audits without requiring 20% consensus.",
+      "outcome": "Relief Granted",
+      "landmark": true,
+      "impactScore": "Landmark Corporate Precedent",
+      "tags": [
+        "Shareholder Rights",
+        "Forensic Audit",
+        "Injunction",
+        "Corporate Law"
+      ]
+    },
+    {
+      "id": "case-02",
+      "title": "M/S Apex Construction vs. Development Authority",
+      "citation": "2023 SCMR 1420 (Supreme Court Appeal)",
+      "court": "Supreme Court",
+      "category": "Civil Litigation",
+      "year": 2023,
+      "clientType": "Commercial Developer",
+      "summary": "Overturned arbitrary land acquisition orders by municipal authorities, restoring commercial property title and granting $3.5M in contract compensation.",
+      "legalStrategy": "Invoked Doctrine of Legitimate Expectation and proved procedural flaws in compulsory land requisition notices.",
+      "precedentSet": "Clarified statutory limits on municipal land acquisition without prior environmental and economic impact assessment.",
+      "outcome": "Won",
+      "landmark": true,
+      "impactScore": "Supreme Court Ruling",
+      "tags": [
+        "Land Acquisition",
+        "Property Rights",
+        "Supreme Court",
+        "Compensation"
+      ]
+    },
+    {
+      "id": "case-03",
+      "title": "Writ Petition: Citizens for Urban Heritage vs. Provincial Govt",
+      "citation": "2023 MLD 910 (High Court Constitutional Bench)",
+      "court": "High Court",
+      "category": "Constitutional Law",
+      "year": 2023,
+      "clientType": "Public Interest Litigation (PIL)",
+      "summary": "Secured stay order prohibiting illegal demolition of historical heritage architecture in downtown metropolitan area.",
+      "legalStrategy": "Argued fundamental rights under Article 9 and 14 asserting cultural preservation as integral component of right to life and dignity.",
+      "precedentSet": "Heritage protection mandates elevated to fundamental constitutional rights enforceable via High Court Writ Jurisdiction.",
+      "outcome": "Relief Granted",
+      "landmark": true,
+      "impactScore": "Constitutional Milestone",
+      "tags": [
+        "Public Interest",
+        "Writ Jurisdiction",
+        "Heritage Law",
+        "Article 19A"
+      ]
+    },
+    {
+      "id": "case-04",
+      "title": "State vs. Farhan & Ors (Homicide Defense)",
+      "citation": "2022 PCrLJ 1105 (Appellate Division)",
+      "court": "Appellate High Court",
+      "category": "Criminal Defense",
+      "year": 2022,
+      "clientType": "Falsely Accused Defendant",
+      "summary": "Secured full acquittal for accused in high-profile murder trial by exposing fabricated ballistics reports and chain of custody lapses.",
+      "legalStrategy": "Cross-examined prosecution forensic expert on cross-contamination risks and proved alibi witness credibility beyond doubt.",
+      "precedentSet": "Strict compliance standards mandated for police forensic ballistics seizure records.",
+      "outcome": "Won",
+      "landmark": false,
+      "impactScore": "Complete Acquittal",
+      "tags": [
+        "Criminal Appeal",
+        "Forensic Science",
+        "Chain of Custody",
+        "Acquittal"
+      ]
+    },
+    {
+      "id": "case-05",
+      "title": "Khan Estate Partition & Family Trust Litigation",
+      "citation": "2021 YLR 884 (Civil Court)",
+      "court": "District & Sessions Court",
+      "category": "Family & Inheritance",
+      "year": 2021,
+      "clientType": "Female Heirs & Beneficiaries",
+      "summary": "Resolved a 14-year-old high-value estate distribution dispute across multiple commercial properties, enforcing equitable female inheritance rights.",
+      "legalStrategy": "Utilized modern asset valuation methodologies and court-appointed commission to partition immovable holdings seamlessly.",
+      "precedentSet": "Enforced strict time-bound resolution protocol for inheritance partitioning under Islamic Succession laws.",
+      "outcome": "Settled",
+      "landmark": false,
+      "impactScore": "Equitable Division",
+      "tags": [
+        "Inheritance",
+        "Estate Planning",
+        "Family Law",
+        "Property Partition"
+      ]
+    },
+    {
+      "id": "case-06",
+      "title": "Global Logistics Ltd vs. Customs & Revenue Board",
+      "citation": "2024 PTD 502 (Customs Appellate Tribunal)",
+      "court": "Customs Appellate Tribunal",
+      "category": "Tax & Revenue",
+      "year": 2024,
+      "clientType": "International Shipping Enterprise",
+      "summary": "Successfully quashed unfair penal tariff levies totaling $850,000 imposed due to customs classification errors.",
+      "legalStrategy": "Demonstrated harmonized tariff code compliance under World Customs Organization standards.",
+      "precedentSet": "Customs authorities prohibited from retrospective re-classification without prior statutory notice.",
+      "outcome": "Won",
+      "landmark": false,
+      "impactScore": "Customs Precedent",
+      "tags": [
+        "Taxation",
+        "Revenue Law",
+        "Customs Duties",
+        "Tariff Dispute"
+      ]
+    }
+  ],
+  "practiceAreas": [
+    {
+      "id": "pa-01",
+      "title": "Constitutional Law",
+      "shortDesc": "High Court Writ Petitions, Fundamental Rights protection, Public Interest Litigation (PIL), and Judicial Reviews.",
+      "fullDesc": "Representing individuals, corporations, and civil society in filing High Court Writ Petitions under Articles 199 & 184(3). Specializing in challenging unlawful administrative actions, fundamental rights violations, and statutory ultra vires actions.",
+      "iconName": "Scale",
+      "imageUrl": "",
+      "keyStatutes": [
+        "Constitution of Pakistan",
+        "Administrative Law Doctrines",
+        "Judicial Review Guidelines"
+      ],
+      "successRate": "96%",
+      "handledCasesCount": 310
+    },
+    {
+      "id": "pa-02",
+      "title": "Civil Litigation",
+      "shortDesc": "Property partition, breach of contract, specific performance suits, declarations, and injunction proceedings.",
+      "fullDesc": "Handling high-value civil suits, property disputes, contract enforcement, land title verification, specific performance, and tort actions across District and High Court levels.",
+      "iconName": "Building",
+      "imageUrl": "",
+      "keyStatutes": [
+        "Code of Civil Procedure (CPC 1908)",
+        "Specific Relief Act 1877",
+        "Transfer of Property Act"
+      ],
+      "successRate": "93%",
+      "handledCasesCount": 480
+    },
+    {
+      "id": "pa-03",
+      "title": "Criminal Defense",
+      "shortDesc": "High Court bail applications, criminal appeals, white-collar crime defense, and quashing of FIRs.",
+      "fullDesc": "Providing defense counsel for high-profile criminal matters, pre-arrest and post-arrest bails, NAB financial offenses, cybercrime defense, and murder appeal hearings.",
+      "iconName": "ShieldCheck",
+      "imageUrl": "",
+      "keyStatutes": [
+        "Code of Criminal Procedure (CrPC 1898)",
+        "Penal Code (PPC)",
+        "NAB Ordinance"
+      ],
+      "successRate": "91%",
+      "handledCasesCount": 290
+    },
+    {
+      "id": "pa-04",
+      "title": "Corporate & Commercial",
+      "shortDesc": "Mergers & acquisitions, shareholder litigation, commercial arbitration, and regulatory compliance.",
+      "fullDesc": "Advising corporate boards, drafting cross-border commercial contracts, representing parties in international arbitration, shareholder dispute resolution, and regulatory compliance.",
+      "iconName": "Briefcase",
+      "imageUrl": "",
+      "keyStatutes": [
+        "Companies Act 2017",
+        "Arbitration Act 1940",
+        "Securities & Exchange Regulations"
+      ],
+      "successRate": "95%",
+      "handledCasesCount": 220
+    },
+    {
+      "id": "pa-05",
+      "title": "Property & Real Estate",
+      "shortDesc": "Title perfection, leasehold disputes, commercial development contracts, and municipal planning challenges.",
+      "fullDesc": "Full-service real estate legal counseling including title search verification, joint venture real estate contracts, land acquisition challenges, and tenant-landlord disputes.",
+      "iconName": "FileText",
+      "imageUrl": "",
+      "keyStatutes": [
+        "Registration Act 1908",
+        "Land Revenue Act",
+        "Urban Planning By-laws"
+      ],
+      "successRate": "94%",
+      "handledCasesCount": 340
+    },
+    {
+      "id": "pa-06",
+      "title": "Family & Inheritance",
+      "shortDesc": "Estate succession planning, probate certification, custody matters, and marital property partition.",
+      "fullDesc": "Compassionate yet assertive legal representation in family court proceedings, inheritance claims, distribution of inherited estates, probate execution, and guardianship petitions.",
+      "iconName": "Award",
+      "imageUrl": "",
+      "keyStatutes": [
+        "Succession Act 1925",
+        "Family Courts Act 1964",
+        "Guardians and Wards Act"
+      ],
+      "successRate": "97%",
+      "handledCasesCount": 180
+    }
+  ],
+  "events": [
+    {
+      "id": "event-01",
+      "title": "Keynote Address: Constitutional Writs & Administrative Accountability",
+      "category": "Seminars & Speeches",
+      "date": "October 14, 2025",
+      "location": "High Court Bar Association Auditorium",
+      "description": "Advocate Noor Alam Khatri delivered a masterclass keynote to over 250 young lawyers and bar members on effective writ drafting, interim stays, and doctrine of administrative fairness.",
+      "imageUrl": "",
+      "tags": [
+        "Bar Association",
+        "Keynote",
+        "Constitutional Law",
+        "Writ Practice"
+      ],
+      "featured": true
+    },
+    {
+      "id": "event-02",
+      "title": "Supreme Court Bench Hearing on Commercial Arbitration Reform",
+      "category": "High Court Proceedings",
+      "date": "August 22, 2025",
+      "location": "Supreme Court Building, Islamabad",
+      "description": "Represented the Bar Delegation in advocating for streamlined commercial arbitration rules to accelerate cross-border investment dispute resolutions.",
+      "imageUrl": "",
+      "tags": [
+        "Supreme Court",
+        "Arbitration",
+        "Legal Reform"
+      ],
+      "featured": true
+    },
+    {
+      "id": "event-03",
+      "title": "Publication: 'Modern Forensic Evidence Standards in Criminal Jurisprudence'",
+      "category": "Legal Publications",
+      "date": "May 10, 2025",
+      "location": "Law Review Journal, Vol 18",
+      "description": "Published research paper examining digital chain of custody integrity and electronic evidence admissibility in appellate court practice.",
+      "imageUrl": "",
+      "tags": [
+        "Research",
+        "Publication",
+        "Forensic Law",
+        "Evidence Act"
+      ],
+      "featured": false
+    },
+    {
+      "id": "event-04",
+      "title": "Annual Legal Aid Clinic for Indigent Litigants",
+      "category": "Bar Association",
+      "date": "January 15, 2025",
+      "location": "District Court Law Library Complex",
+      "description": "Organized a 3-day pro-bono legal counsel session assisting over 85 underprivileged families with property title and inheritance paperwork.",
+      "imageUrl": "",
+      "tags": [
+        "Pro Bono",
+        "Legal Aid",
+        "Community Service"
+      ],
+      "featured": false
+    }
+  ],
+  "consultations": [
+    {
+      "id": "consult-101",
+      "name": "Tariq Mahmood",
+      "email": "tariq.m@example.com",
+      "phone": "+92 321 4455880",
+      "category": "Constitutional Law",
+      "urgency": "High Court Filing",
+      "message": "Need urgent High Court Writ petition assistance regarding illegal demolition notice issued for commercial shop in market district.",
+      "preferredDate": "2026-08-05",
+      "status": "New",
+      "createdAt": "2026-08-02T14:30:00Z"
+    },
+    {
+      "id": "consult-102",
+      "name": "Saima Malik",
+      "email": "saima.malik@corp.com",
+      "phone": "+92 301 9988771",
+      "category": "Corporate & Commercial",
+      "urgency": "Standard",
+      "message": "Seeking consultation for shareholder agreement review and protection clause drafting prior to series A funding round.",
+      "preferredDate": "2026-08-08",
+      "status": "Scheduled",
+      "createdAt": "2026-08-01T10:15:00Z"
+    }
+  ],
+  "moderators": [
+    {
+      "id": "mod-superadmin-1",
+      "email": "waseemparhyar760@gmail.com",
+      "name": "Waseem Parhyar",
+      "role": "superadmin",
+      "permissions": [
+        "cases",
+        "practice",
+        "events",
+        "inquiries",
+        "contacts",
+        "profile",
+        "git",
+        "moderators"
+      ],
+      "createdAt": "2026-09-07T00:00:00.012Z",
+      "status": "active",
+      "notes": "High Court Advocate Super Admin"
+    },
+    {
+      "id": "mod-superadmin-2",
+      "email": "nooradv55@gmail.com",
+      "name": "Noor Alam Khatri",
+      "role": "superadmin",
+      "permissions": [
+        "cases",
+        "practice",
+        "events",
+        "inquiries",
+        "contacts",
+        "profile",
+        "git",
+        "moderators"
+      ],
+      "createdAt": "2026-09-07T00:00:00.013Z",
+      "status": "active",
+      "notes": "Senior Advocate Chamber Lead"
+    },
+    {
+      "id": "mod-superadmin-3",
+      "email": "wasebkatha@gmail.com",
+      "name": "Waseb Katha",
+      "role": "superadmin",
+      "permissions": [
+        "cases",
+        "practice",
+        "events",
+        "inquiries",
+        "contacts",
+        "profile",
+        "git",
+        "moderators"
+      ],
+      "createdAt": "2026-09-07T00:00:00.014Z",
+      "status": "active",
+      "notes": "Technical Administrator"
+    }
+  ]
+}
