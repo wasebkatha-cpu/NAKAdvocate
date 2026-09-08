@@ -85,9 +85,13 @@ export const FooterSection: React.FC<FooterSectionProps> = ({
               </li>
               <li>
                 <button
-                  onClick={onOpenAdmin}
+                  onClick={() => {
+                    console.log('Opening Admin Panel...');
+                    onOpenAdmin();
+                  }}
+                  type="button"
                   id="footer-admin-btn"
-                  className="hover:text-amber-400 transition-colors flex items-center gap-1 cursor-pointer text-slate-300"
+                  className="hover:text-amber-400 transition-colors flex items-center gap-1 cursor-pointer text-slate-300 relative z-50 p-1"
                 >
                   <Lock className="w-3.5 h-3.5 text-amber-400" />
                   <span>{isAdminLoggedIn ? 'Admin Panel' : 'Admin'}</span>

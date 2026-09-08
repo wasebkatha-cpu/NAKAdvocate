@@ -582,13 +582,13 @@ export const AdminPanel: React.FC<AdminPanelProps> = ({
                   <img src={currentUser.photoURL} alt="User Avatar" className="w-5 h-5 rounded-full object-cover" />
                 ) : (
                   <div className="w-5 h-5 rounded-full bg-amber-500/20 text-amber-400 flex items-center justify-center font-bold text-[10px]">
-                    {currentUser?.email ? currentUser.email[0].toUpperCase() : 'A'}
+                    {currentUserEmail ? currentUserEmail[0].toUpperCase() : 'A'}
                   </div>
                 )}
                 <div className="flex flex-col text-left">
                   <div className="flex items-center gap-1.5">
                     <span className="font-semibold text-slate-200 text-[11px] leading-tight">
-                      {currentUser?.displayName || currentUser?.email || 'Admin Authorized'}
+                      {currentUser?.displayName || currentUserEmail || 'Admin Authorized'}
                     </span>
                     {isSuperAdmin ? (
                       <span className="bg-amber-500/20 text-amber-300 border border-amber-500/40 text-[9px] font-bold px-1.5 py-0.2 rounded">
