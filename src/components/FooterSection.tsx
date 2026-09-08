@@ -83,7 +83,7 @@ export const FooterSection: React.FC<FooterSectionProps> = ({
                   Consultation
                 </button>
               </li>
-              <li>
+              <li className="pt-2 border-t border-slate-800/60 mt-1">
                 <button
                   onClick={() => {
                     console.log('Opening Admin Panel...');
@@ -91,10 +91,10 @@ export const FooterSection: React.FC<FooterSectionProps> = ({
                   }}
                   type="button"
                   id="footer-admin-btn"
-                  className="hover:text-amber-400 transition-colors flex items-center gap-1 cursor-pointer text-slate-300 relative z-50 p-1"
+                  className="hover:text-amber-400 transition-colors flex items-center gap-1.5 cursor-pointer text-slate-300 relative z-50 p-2 -ml-2 rounded-md hover:bg-slate-900/50"
                 >
                   <Lock className="w-3.5 h-3.5 text-amber-400" />
-                  <span>{isAdminLoggedIn ? 'Admin Panel' : 'Admin'}</span>
+                  <span>{isAdminLoggedIn ? 'Admin Panel' : 'Admin Area'}</span>
                   {isAdminLoggedIn && (
                     <span className="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse"></span>
                   )}

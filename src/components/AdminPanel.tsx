@@ -78,6 +78,40 @@ export const AdminPanel: React.FC<AdminPanelProps> = ({
     }
   }, [isAdminLoggedIn, currentUserEmail, activeTab]);
 
+  // Google Sign In via @react-oauth/google
+  const handleGoogleSignIn = useGoogleLogin({
+    onSuccess: async (tokenResponse) => {
+      setPassError('');
+      setAuthSuccessMsg('');
+      setAuthLoading(true);
+      try {
+        const userInfo = await fetch('https://www.googleapis.com/oauth2/v3/userinfo', {
+          headers: { Authorization: `Bearer ${tokenResponse.access_token}` },
+        }).then(res => res.json());
+
+        const signedInEmail = userInfo.email;
+
+        if (!isAuthorizedAdminEmail(signedInEmail)) {
+          setPassError(`Access Denied: ${signedInEmail || 'Account'} is not an authorized admin email.`);
+          setAuthLoading(false);
+          return;
+        }
+
+        StorageService.setAdminAuthentication(true, signedInEmail);
+        setIsAdminLoggedIn(true);
+      } catch (err: any) {
+        console.error('Google Sign-In user info fetch error:', err);
+        setPassError('Failed to fetch Google user info');
+      } finally {
+        setAuthLoading(false);
+      }
+    },
+    onError: (error) => {
+      console.error('Google Sign-In error:', error);
+      setPassError('Google Sign-In failed or was cancelled.');
+    }
+  });
+
   if (!isOpen) return null;
 
   // Handle Firebase Auth Email/Password Forms
@@ -183,40 +217,6 @@ export const AdminPanel: React.FC<AdminPanelProps> = ({
       setAuthLoading(false);
     }
   };
-
-  // Google Sign In via @react-oauth/google
-  const handleGoogleSignIn = useGoogleLogin({
-    onSuccess: async (tokenResponse) => {
-      setPassError('');
-      setAuthSuccessMsg('');
-      setAuthLoading(true);
-      try {
-        const userInfo = await fetch('https://www.googleapis.com/oauth2/v3/userinfo', {
-          headers: { Authorization: `Bearer ${tokenResponse.access_token}` },
-        }).then(res => res.json());
-
-        const signedInEmail = userInfo.email;
-
-        if (!isAuthorizedAdminEmail(signedInEmail)) {
-          setPassError(`Access Denied: ${signedInEmail || 'Account'} is not an authorized admin email.`);
-          setAuthLoading(false);
-          return;
-        }
-
-        StorageService.setAdminAuthentication(true, signedInEmail);
-        setIsAdminLoggedIn(true);
-      } catch (err: any) {
-        console.error('Google Sign-In user info fetch error:', err);
-        setPassError('Failed to fetch Google user info');
-      } finally {
-        setAuthLoading(false);
-      }
-    },
-    onError: (error) => {
-      console.error('Google Sign-In error:', error);
-      setPassError('Google Sign-In failed or was cancelled.');
-    }
-  });
 
   // Legacy Passcode Login
   const handlePasscodeLogin = (e: React.FormEvent) => {
