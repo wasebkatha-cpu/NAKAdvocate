@@ -765,6 +765,18 @@ export const AdminPanel: React.FC<AdminPanelProps> = ({
                     <span>Send Password Reset Email</span>
                   )}
                 </button>
+                
+                <div className="flex flex-col gap-2 pt-2 text-center text-[11px] text-slate-400">
+                  {authMethod === 'signin' ? (
+                    <span>Forgot password? <button type="button" onClick={() => setAuthMethod('reset')} className="text-amber-400 font-bold hover:underline cursor-pointer">Reset it</button></span>
+                  ) : (
+                    <span>Back to <button type="button" onClick={() => setAuthMethod('signin')} className="text-amber-400 font-bold hover:underline cursor-pointer">Sign In</button></span>
+                  )}
+                  <div className="mt-1 flex items-center justify-center gap-1.5 text-[9px] text-emerald-400/80 bg-emerald-900/20 py-1.5 px-2 rounded-md border border-emerald-800/30">
+                    <ShieldCheck className="w-3 h-3" />
+                    <span>Access Restricted: Only authorized accounts can log in.</span>
+                  </div>
+                </div>
               </form>
             ) : (
               /* Legacy Passcode Form */
