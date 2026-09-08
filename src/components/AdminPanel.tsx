@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { useGoogleLogin } from '@react-oauth/google';
 import { 
   Lock, Key, ShieldCheck, LogOut, GitCommit, GitBranch, Download, Upload, 
   Plus, Trash2, Edit3, Save, CheckCircle2, AlertCircle, RefreshCw, X, 
@@ -78,39 +77,35 @@ export const AdminPanel: React.FC<AdminPanelProps> = ({
     }
   }, [isAdminLoggedIn, currentUserEmail, activeTab]);
 
-  // Google Sign In via @react-oauth/google
-  const handleGoogleSignIn = useGoogleLogin({
-    onSuccess: async (tokenResponse) => {
-      setPassError('');
-      setAuthSuccessMsg('');
-      setAuthLoading(true);
-      try {
-        const userInfo = await fetch('https://www.googleapis.com/oauth2/v3/userinfo', {
-          headers: { Authorization: `Bearer ${tokenResponse.access_token}` },
-        }).then(res => res.json());
+  // Google Sign In via Firebase Auth
+  const handleGoogleSignIn = async () => {
+    setPassError('');
+    setAuthSuccessMsg('');
+    setAuthLoading(true);
+    try {
+      const result = await loginWithGoogle();
+      const signedInEmail = result.user.email;
 
-        const signedInEmail = userInfo.email;
-
-        if (!isAuthorizedAdminEmail(signedInEmail)) {
-          setPassError(`Access Denied: ${signedInEmail || 'Account'} is not an authorized admin email.`);
-          setAuthLoading(false);
-          return;
-        }
-
-        StorageService.setAdminAuthentication(true, signedInEmail);
-        setIsAdminLoggedIn(true);
-      } catch (err: any) {
-        console.error('Google Sign-In user info fetch error:', err);
-        setPassError('Failed to fetch Google user info');
-      } finally {
+      if (!isAuthorizedAdminEmail(signedInEmail)) {
+        setPassError(`Access Denied: ${signedInEmail || 'Account'} is not an authorized admin email.`);
+        await logoutUser();
         setAuthLoading(false);
+        return;
       }
-    },
-    onError: (error) => {
-      console.error('Google Sign-In error:', error);
-      setPassError('Google Sign-In failed or was cancelled.');
+
+      StorageService.setAdminAuthentication(true, signedInEmail);
+      setIsAdminLoggedIn(true);
+    } catch (err: any) {
+      console.error('Google Sign-In error:', err);
+      if (err.code === 'auth/popup-closed-by-user') {
+        setPassError('Google Sign-In cancelled.');
+      } else {
+        setPassError('Google Sign-In failed. Check console for details.');
+      }
+    } finally {
+      setAuthLoading(false);
     }
-  });
+  };
 
   if (!isOpen) return null;
 
