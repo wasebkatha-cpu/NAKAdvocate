@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
+import { useGoogleLogin } from '@react-oauth/google';
 import { 
   Lock, Key, ShieldCheck, LogOut, GitCommit, GitBranch, Download, Upload, 
   Plus, Trash2, Edit3, Save, CheckCircle2, AlertCircle, RefreshCw, X, 
@@ -63,7 +64,7 @@ export const AdminPanel: React.FC<AdminPanelProps> = ({
   const [modNotesInput, setModNotesInput] = useState('');
 
   // Permission Checks
-  const currentUserEmail = currentUser?.email || '';
+  const currentUserEmail = currentUser?.email || StorageService.getAdminEmail() || '';
   const isSuperAdmin = StorageService.isSuperAdmin(currentUserEmail);
   const userPermissions = StorageService.getUserPermissions(currentUserEmail);
 
@@ -101,14 +102,15 @@ export const AdminPanel: React.FC<AdminPanelProps> = ({
         }
 
         const cred = await loginWithEmail(email, password);
-        if (!isAuthorizedAdminEmail(cred.user?.email)) {
+        const signedInEmail = cred.user?.email || email;
+        if (!isAuthorizedAdminEmail(signedInEmail)) {
           await logoutUser();
-          setPassError(`Access Denied: ${cred.user?.email || email} is not an authorized admin.`);
+          setPassError(`Access Denied: ${signedInEmail} is not an authorized admin.`);
           setAuthLoading(false);
           return;
         }
 
-        StorageService.setAdminAuthentication(true);
+        StorageService.setAdminAuthentication(true, signedInEmail);
         setIsAdminLoggedIn(true);
         setEmail('');
         setPassword('');
@@ -137,14 +139,15 @@ export const AdminPanel: React.FC<AdminPanelProps> = ({
         }
 
         const cred = await registerWithEmail(email, password);
-        if (!isAuthorizedAdminEmail(cred.user?.email)) {
+        const signedInEmail = cred.user?.email || email;
+        if (!isAuthorizedAdminEmail(signedInEmail)) {
           await logoutUser();
-          setPassError(`Access Denied: ${cred.user?.email || email} is not authorized.`);
+          setPassError(`Access Denied: ${signedInEmail} is not authorized.`);
           setAuthLoading(false);
           return;
         }
 
-        StorageService.setAdminAuthentication(true);
+        StorageService.setAdminAuthentication(true, signedInEmail);
         setIsAdminLoggedIn(true);
         setEmail('');
         setPassword('');
@@ -181,32 +184,39 @@ export const AdminPanel: React.FC<AdminPanelProps> = ({
     }
   };
 
-  // Google Sign In
-  const handleGoogleSignIn = async () => {
-    setPassError('');
-    setAuthSuccessMsg('');
-    setAuthLoading(true);
-    try {
-      const res = await loginWithGoogle();
-      const signedInEmail = res.user?.email;
+  // Google Sign In via @react-oauth/google
+  const handleGoogleSignIn = useGoogleLogin({
+    onSuccess: async (tokenResponse) => {
+      setPassError('');
+      setAuthSuccessMsg('');
+      setAuthLoading(true);
+      try {
+        const userInfo = await fetch('https://www.googleapis.com/oauth2/v3/userinfo', {
+          headers: { Authorization: `Bearer ${tokenResponse.access_token}` },
+        }).then(res => res.json());
 
-      if (!isAuthorizedAdminEmail(signedInEmail)) {
-        await logoutUser();
-        setPassError(`Access Denied: ${signedInEmail || 'Account'} is not an authorized admin email.`);
-        return;
-      }
+        const signedInEmail = userInfo.email;
 
-      StorageService.setAdminAuthentication(true);
-      setIsAdminLoggedIn(true);
-    } catch (err: any) {
-      console.error('Google Sign-In error:', err);
-      if (err.code !== 'auth/popup-closed-by-user') {
-        setPassError(err.message || 'Google Sign-In failed');
+        if (!isAuthorizedAdminEmail(signedInEmail)) {
+          setPassError(`Access Denied: ${signedInEmail || 'Account'} is not an authorized admin email.`);
+          setAuthLoading(false);
+          return;
+        }
+
+        StorageService.setAdminAuthentication(true, signedInEmail);
+        setIsAdminLoggedIn(true);
+      } catch (err: any) {
+        console.error('Google Sign-In user info fetch error:', err);
+        setPassError('Failed to fetch Google user info');
+      } finally {
+        setAuthLoading(false);
       }
-    } finally {
-      setAuthLoading(false);
+    },
+    onError: (error) => {
+      console.error('Google Sign-In error:', error);
+      setPassError('Google Sign-In failed or was cancelled.');
     }
-  };
+  });
 
   // Legacy Passcode Login
   const handlePasscodeLogin = (e: React.FormEvent) => {
@@ -637,7 +647,7 @@ export const AdminPanel: React.FC<AdminPanelProps> = ({
               <div className="space-y-3">
                 <button
                   type="button"
-                  onClick={handleGoogleSignIn}
+                  onClick={() => handleGoogleSignIn()}
                   disabled={authLoading}
                   className="w-full py-2.5 px-4 rounded-xl bg-slate-800 hover:bg-slate-700/80 text-white font-medium text-xs border border-slate-700 flex items-center justify-center gap-3 transition-all cursor-pointer shadow-sm hover:border-slate-600"
                 >

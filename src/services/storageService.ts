@@ -670,11 +670,17 @@ export class StorageService {
     return localStorage.getItem(ADMIN_AUTH_KEY) === 'true';
   }
 
-  static setAdminAuthentication(status: boolean): void {
+  static getAdminEmail(): string | null {
+    return localStorage.getItem('admin_email');
+  }
+
+  static setAdminAuthentication(status: boolean, email?: string): void {
     if (status) {
       localStorage.setItem(ADMIN_AUTH_KEY, 'true');
+      if (email) localStorage.setItem('admin_email', email);
     } else {
       localStorage.removeItem(ADMIN_AUTH_KEY);
+      localStorage.removeItem('admin_email');
     }
   }
 
@@ -711,7 +717,7 @@ export class StorageService {
     const mod = mods.find(m => m.email.trim().toLowerCase() === normalized && m.status === 'active');
     if (mod) return mod.role === 'superadmin';
     // Fallback for hardcoded super admins
-    return ['waseemparhyar760@gmail.com', 'nooradv55@gmail.com', 'wasebkatha@gmail.com'].includes(normalized);
+    return ['waseemparhyar09@gmail.com', 'waseemparhyar760@gmail.com', 'nooradv55@gmail.com', 'wasebkatha@gmail.com'].includes(normalized);
   }
 
   static getUserPermissions(email?: string | null): AdminPermission[] {
