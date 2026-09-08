@@ -38,6 +38,7 @@ import { StorageService } from './storageService';
 
 // Authorized Admin Emails
 export const AUTHORIZED_ADMIN_EMAILS = [
+  'waseemparhyar09@gmail.com', // Added user's current email
   'waseemparhyar760@gmail.com',
   'nooradv55@gmail.com',
   'wasebkatha@gmail.com'
