@@ -1,6 +1,6 @@
 {
   "version": "1.2.0",
-  "lastUpdated": "2026-10-23T11:11:07.197Z",
+  "lastUpdated": "2026-10-23T12:10:01.584Z",
   "profile": {
     "name": "Noor Alam Khatri",
     "title": "Advocate High Court & Legal Consultant",
@@ -16,9 +16,9 @@
     "phoneSecondary": "021-35631199",
     "emailPrimary": "nooradv55@gmail.com",
     "workingHours": "Mon-Sat-09:00 AM - 07:00 PM",
-    "googleMapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3620.012581298412!2d67.0099318!3d24.8607343!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33e11f1f1f1f1%3A0x123456789abcdef!2sHigh%20Court%20Building!5e0!3m2!1sen!2s!4v1700000000000!5m2!1sen!2s",
-    "latitude": 24.860734,
-    "longitude": 67.009932,
+    "googleMapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d452.52061712487045!2d67.02347060242946!3d24.858215736376494!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33fa240dac071%3A0xedbe436de3ba0e3d!2sNoor%20Alam%20Khatri%3A%20Advocate%20%26%20Law%20Consultant!5e0!3m2!1sen!2s!4v1792756181938!5m2!1sen!2s",
+    "latitude": 24.858215736376494,
+    "longitude": 67.02347060242946,
     "domainUrl": "https://nakadvocate.com",
     "portraitUrl": "https://raw.githubusercontent.com/wasebkatha-cpu/NAKAdvocateImages/main/images/profile_portrait.jpg",
     "bannerUrl": "",
@@ -77,7 +77,7 @@
     "filePath": "site_data.json",
     "gitHubToken": "",
     "autoSync": true,
-    "lastSyncTime": "2026-10-23T11:11:07.197Z",
+    "lastSyncTime": "2026-10-23T12:10:01.584Z",
     "lastCommitHash": "Initial"
   },
   "cases": [],
