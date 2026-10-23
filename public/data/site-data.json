@@ -1,6 +1,6 @@
 {
   "version": "1.2.0",
-  "lastUpdated": "2026-10-23T12:10:22.253Z",
+  "lastUpdated": "2026-10-23T13:26:44.148Z",
   "profile": {
     "name": "Noor Alam Khatri",
     "title": "Advocate High Court & Legal Consultant",
@@ -21,7 +21,7 @@
     "longitude": 67.02347060242946,
     "domainUrl": "https://nakadvocate.com",
     "portraitUrl": "https://raw.githubusercontent.com/wasebkatha-cpu/NAKAdvocateImages/main/images/profile_portrait.jpg",
-    "bannerUrl": "",
+    "bannerUrl": "https://raw.githubusercontent.com/wasebkatha-cpu/NAKAdvocateImages/main/images/profile_banner.jpg",
     "additionalContacts": [
       {
         "id": "contact-01",
@@ -77,8 +77,9 @@
     "filePath": "site_data.json",
     "gitHubToken": "",
     "autoSync": true,
-    "lastSyncTime": "2026-10-23T12:10:22.253Z",
-    "lastCommitHash": "Initial"
+    "lastSyncTime": "2026-10-23T13:26:44.148Z",
+    "lastCommitHash": "Initial",
+    "encodedSyncKey": "09091b00135c261c303435076851013a1a24030016123c0d1f35007173671a320612521447291b58"
   },
   "cases": [],
   "practiceAreas": [],
